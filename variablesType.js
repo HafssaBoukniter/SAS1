@@ -63,7 +63,11 @@ let numb1 = prompt('Donner votre 1er nombre :');
 let numb2 = prompt('Donner votre 2ème nombre :');
 let numb3 = prompt('Donner votre 3ème nombre :');
 
-let moyennePonderee = ((numb1*2) + (numb2*3) + (numb3*5))/3;
+let p1 = 2;
+let p2 = 3;
+let p3 = 5;
+
+let moyennePonderee = ((numb1*p1) + (numb2*p2) + (numb3*p3))/(p1 + p2 + p3);
 
 console.log(`La moyenne pondérée de trois nombres donnés est ${moyennePonderee.toFixed(2)}`);
 
@@ -118,8 +122,15 @@ let d = chiffre % 10;
 console.log(`L'inverse de nombre entier à quatre chiffres est : ${a}${b}${c}${d}`);
 */
 //challenge 13
-//let num = prompt('Saisir un nombre entier :');
-//let numBinaire = num;
-//let numHexadecimal = num;
+let num = Number(prompt('Saisir un nombre entier :'));
 
-//console.log(`La valeur de ${num} équivalente en binaire est ${numBinaire} et en hexadécimal est ${numHexadecimal}`);
+// let numBinaire = "";
+let numBinaire = num.toString(2);
+let numHexadecimal = num.toString(16);
+
+// while(num >0){
+//     numBinaire += num % 2;
+//     num = parseInt(num/2);
+// }
+
+console.log(`La valeur équivalente en binaire est ${numBinaire} et en hexadécimal est ${numHexadecimal}`);
