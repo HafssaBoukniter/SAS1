@@ -67,3 +67,20 @@ for(let i = 0;i < num;i++){
 console.log(`La fibonacci de ${num} est : ${resultat}`);
 */
 //challenge 7
+
+/*
+//challenge 8
+function paireImpaire(num1){
+    if(num1 % 2 == 0){
+        return true;
+    }else{
+        return false;
+    }
+}
+let num1 = parseInt(prompt("Saisir un nombre entier :"));
+if(paireImpaire(num1)){
+    console.log(`Le nombre ${num1} est paire`);
+}else{
+    console.log(`Le nombre ${num1} est impaire`);
+}
+*/
