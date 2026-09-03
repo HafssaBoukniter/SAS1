@@ -1,10 +1,12 @@
+const prompt = require('prompt-sync')();
+/*
 //challenge 1 
 let n = parseInt(prompt("Entrez le nombre de la table souhaitée :"));
 for (let i = 10; i >= 1; i--) {
     let resultat = n * i;
    console.log(`${n} * ${i} = ${resultat}`);
 }
-/*
+
 //challenge 2
 let num = parseInt(prompt("Entrez un  nombre des lignes :"));
 for (let i = 1; i <= num; i++) {
