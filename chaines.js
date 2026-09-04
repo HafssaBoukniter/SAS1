@@ -54,37 +54,66 @@ const prompt = require('prompt-sync')();
 //     }
 // }
 
-function isPalindrome(text){
-    let leng = text.length;
-    if(leng % 2==0){
-        let len = text.length / 2;
-        let x = text.slice(0,len);
-        let y = text.slice(len);
-        let inv = y.split("").reverse().join("");
-        if(x == inv){
+// function isPalindrome(text){
+//     let leng = text.length;
+//     if(leng % 2==0){
+//         let len = text.length / 2;
+//         let x = text.slice(0,len);
+//         let y = text.slice(len);
+//         let inv = y.split("").reverse().join("");
+//         if(x == inv){
+//             return true;
+//         }else{
+//             return false;
+//         }
+//     }else{
+//         let len = Math.floor(text.length / 2);
+//         let x = text.slice(0,len-1);
+//         let y = text.slice(len+1);
+//         let inv = y.split("").reverse().join("");
+//         if(x == inv){
+//             return true;
+//         }else{
+//             return false;
+//         }
+//     }
+// }
+
+// let textP = prompt("Entrez une chaine :")
+// if(isPalindrome(textP.trim())){
+//     console.log(`La chaine ${textP} est palindrome`);
+// }else{
+//     console.log(`La chaine ${textP} pas un palindrome`);
+// }
+
+//ex5
+let name1 = prompt("Entrez le 1er nom :");
+let name2 = prompt("Entrez le 2eme nom :");
+
+function isAnagramme(name1,name2){
+    if(name1.length == name2.length){
+        let tab1 = name1.split("");
+        let tab2 = name2.split("");
+
+        let tabSort1 = tab1.sort().join();
+        let tabSort2 = tab2.sort().join();
+
+        if(tabSort1 == tabSort2){
             return true;
         }else{
             return false;
         }
     }else{
-        let len = Math.floor(text.length / 2);
-        let x = text.slice(0,len-1);
-        let y = text.slice(len+1);
-        let inv = y.split("").reverse().join("");
-        if(x == inv){
-            return true;
-        }else{
-            return false;
-        }
+        return false;
     }
 }
 
-let textP = prompt("Entrez une chaine :")
-if(isPalindrome(textP.trim())){
-    console.log(`La chaine ${textP} est palindrome`);
+if(isAnagramme(name1,name2)){
+    console.log(`${name1} is anagramme de ${name2}`);
 }else{
-    console.log(`La chaine ${textP} pas un palindrome`);
+    console.log("n'est pas anagramme");
 }
+
 
 /*
 //challenge 1
