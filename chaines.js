@@ -23,6 +23,69 @@ const prompt = require('prompt-sync')();
 // }
 // console.log(x[0].toUpperCase() + s);
 
+//ex4
+// function isPalindrome(text){
+//     // let chaine = text.split('').reverse().join('');
+//     // if(text == chaine){
+//     //     return true;
+//     // }else{
+//     //     return false;
+//     // }
+//     let chaine = text.split('').reverse();
+//     for(let i = 0;i < text.length;i++){
+//         for(let j = text.length;j < text.length;i--){
+//             if(text[i] == chaine[j]){
+//                 return true;
+//                 break;
+//             }else{
+//                 return false;
+//             }
+//         }
+//     }
+// }
+
+// function isPalindrome(text) {
+//     for (let i = 0; i < text.length / 2; i++) {
+//         if (text[i] !== text[text.length - 1 - i]) {
+//             return false;
+//         }else{
+//             return true;
+//         }
+//     }
+// }
+
+function isPalindrome(text){
+    let leng = text.length;
+    if(leng % 2==0){
+        let len = text.length / 2;
+        let x = text.slice(0,len);
+        let y = text.slice(len);
+        let inv = y.split("").reverse().join("");
+        if(x == inv){
+            return true;
+        }else{
+            return false;
+        }
+    }else{
+        let len = Math.floor(text.length / 2);
+        let x = text.slice(0,len-1);
+        let y = text.slice(len+1);
+        let inv = y.split("").reverse().join("");
+        if(x == inv){
+            return true;
+        }else{
+            return false;
+        }
+    }
+}
+
+let textP = prompt("Entrez une chaine :")
+if(isPalindrome(textP.trim())){
+    console.log(`La chaine ${textP} est palindrome`);
+}else{
+    console.log(`La chaine ${textP} pas un palindrome`);
+}
+
 /*
 //challenge 1
 let texte = prompt("Entrer un text :");
@@ -32,8 +95,14 @@ console.log(`Vous avez tapé : ${texte}`);
 //challenge 2
 let texte1 = prompt("Entrer un texte :");
 let compteur = 0;
-for(let caractere of texte1){
+// for(let caractere of texte1){
+//     compteur++;
+
+// }
+let i = 0;
+while(texte1[i] !== undefined){
     compteur++;
+    i++;
 }
 
 console.log(`La longueur de ${texte1} est de ${compteur} caractères`);
