@@ -14,8 +14,14 @@ const prompt = require('prompt-sync')();
 // console.log(text2.at(1));
 
 //ex3
-let x = "youcode";
-console.log(x[0].toUpperCase() + x.slice(1,x.length+1));
+// let x = "youcode";
+// console.log(x[0].toUpperCase() + x.slice(1,x.length+1));
+
+// let s = "";
+// for(let i=1; i < x.length;i++){
+//     s+=x[i];
+// }
+// console.log(x[0].toUpperCase() + s);
 
 /*
 //challenge 1
@@ -87,7 +93,7 @@ function removeSpace(text){
 }
 
 console.log(`La chaine ${removeSpace(chaineEspace)} et ${chaineEspace} avant supprimation`);
-*/
+
 //challenge 10
 let chainePrincipale = prompt("Entrez une chaine :");
 let sousChaine = prompt("Entrez une sous-chaine :");
@@ -98,3 +104,4 @@ if(tr != -1){
 }else{
     console.log(`Aucun sous-chaîne ${sousChaine} dans la chaine principale ${chainePrincipale}`);
 }
+*/
