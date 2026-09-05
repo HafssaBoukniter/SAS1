@@ -85,7 +85,7 @@ let elements = prompt("Saisir un tableau d'entiers comme 1 2 3 :");
 let tab7 = elements.split(" ").map(Number);
 
 console.log(tab7.sort());
-*/
+
 //challenge 8
 let tab8 = [1,2,3,4];
 let tab8Copie = tab8.slice();
@@ -96,3 +96,9 @@ console.log(tab8Copie);
 console.log(tab8Verification);
 
 //challege 9 
+let tab9 = [1,2,3,4];
+let tab9Inverse = tab9.reverse();
+
+console.log(tab9Inverse);
+*/
+//challenge 10
