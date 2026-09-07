@@ -102,3 +102,12 @@ let tab9Inverse = tab9.reverse();
 console.log(tab9Inverse);
 */
 //challenge 10
+// let t7 = prompt("Saisir la taille de Tableaux :");
+// let tab9 = [];
+
+// for(let i = 0;i < t6;i++){
+//     tab6[i] = Number(prompt(`Saisir l'element ${i+1} de tableau :`));
+// }
+
+// let elem = prompt("Saisir le element tu doit rechercher de Tableaux :");
+
