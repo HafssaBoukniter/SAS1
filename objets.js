@@ -20,15 +20,13 @@ let etudiant = {
 };
 
 console.log(`Etudiant : ${etudiant.nom} ${etudiant.prenom}`);
-
 console.log(`Liste des notes : ${etudiant.notes.join(", ")}`);
 
 let somme = 0;
-for(let note of etudiant.notes){
-    somme += 0;
+for(const note of etudiant.notes){
+    somme += note;
 }
 let moyenne = somme / etudiant.notes.length;
-
 console.log(`Moyenne : ${moyenne}`);
 
 //challenge 3
@@ -202,5 +200,3 @@ do{
         break;
     };
 }while(choix !== 4);
-
-
